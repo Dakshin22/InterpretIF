@@ -3,6 +3,9 @@
 using namespace std;
 //this program tokenizes html by extracting passages from a story, Dakshin Rathan
 
+
+
+//Class that represents a passage
 class PassageToken
 {
 private:
@@ -18,6 +21,7 @@ public:
  
 };
 
+//class whose member functions split an IF story into individual PassageToken objects
 class StoryTokenizer
 {
 private:
