@@ -19,16 +19,13 @@ private:
     string line;
     string story;
     string file;
-    vector<PassageToken> passages;
-    vector<LinkPart> links;
+    vector<PassageToken> passages; //Populates with all passages in the form of PassageToken objects upon instantiation
+    vector<LinkPart> links; //Populates with all links in a passage in the form of LinkPart objects upon instatiation
     bool gt;
     string tgt;
-   // vector<Parts*> ifs;
-   // unordered_map<LinkPart,PassageToken> con;
+
 public:
-    void print();
-    void play();
-    //void Process(BlockPart*);
-    IFInterpreter(string);
+    void play(); //function to start the interaction with user
+    IFInterpreter(string); 
     
 };
