@@ -17,3 +17,5 @@ A link, or LinkPart, which is visible to the user around [[these]] brackets.
 If/else-if/else also have corresponding parts, which compare values of variables in the story with stored values and their functionality is the same as in regular programming.
 
 Finally, a block or BlockPart groups the instructions that occur after each if/else-if/else statement.
+
+A sample story file in HTML provided is titled escape.txt
