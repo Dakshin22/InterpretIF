@@ -19,3 +19,7 @@ If/else-if/else also have corresponding parts, which compare values of variables
 Finally, a block or BlockPart groups the instructions that occur after each if/else-if/else statement.
 
 A sample story file in HTML provided is titled escape.txt
+
+# UML Diagram
+Below is the UML Diagram outlining the class design of this project:
+![](Part5_UML-1.jpg)
