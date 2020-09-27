@@ -1,7 +1,6 @@
 #include <vector>
 #include "storytokenizer.h"
 #include "passagetokenizer.h"
-//#include "IFInterpreter.h"
 #include "parts.h"
 #include <iostream>
 #include <fstream>
@@ -132,10 +131,6 @@ void SetPart::extract(PartToken set)
         cout << "\nsomething wrong with string value in 'set': " << val << endl;
     }
 
-    /*   for(auto pair: vars)
-    {
-        cout<< "{" << pair.first<< ": " << pair.second<<"}\n";
-    }*/
 }
 
 void TextPart::extract(PartToken text)
