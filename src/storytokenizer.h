@@ -21,7 +21,7 @@ public:
  
 };
 
-//class whose member functions split an IF story into individual PassageToken objects
+//Class whose member functions split an IF story into individual PassageToken objects
 class StoryTokenizer
 {
 private:
