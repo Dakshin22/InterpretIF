@@ -3,7 +3,7 @@
 #include "ifinterpreter.h"
 using namespace std;
 
-const string FILENAME = "input.txt";
+const string FILENAME = "input.txt"; //CHANGE THIS TO THE TXT/HTML FILE YOU NEED TO TOKENIZE
 
 int main()
 {
