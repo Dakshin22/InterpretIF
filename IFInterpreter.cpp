@@ -11,10 +11,6 @@
 
 using namespace std;
 
-//replace hasnolinks with links.size
-//make stati data member to let if/else if/else ocmmunicate wiht eachother
-//amke it so if without else works.
-
 IFInterpreter::IFInterpreter(string file)
 {
   ifstream in(file);
