@@ -39,7 +39,6 @@ IFInterpreter::IFInterpreter(string file)
     passages.push_back(ptok); //populates passageToken vector
   }
   links = {};
-  //  ifs = {};
   gt = false;
   tgt = "";
 }
