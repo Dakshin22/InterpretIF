@@ -9,27 +9,19 @@ using namespace std;
 //this program tokenizes html by extracting componenets from passages of a story, Dakshin Rathan
 PartToken PassageTokenizer::nextPart()
 {
-    //  cout << "text at position: " << text[position];
-    //  cout << ' ' << "position: " << position << ' ';
-    // cout << "find set: " << text.find("(set: ", position, 6);
-    // cout << " find link: " << text.find("[[", position, 2);
-    //check = text.substr(position, 10);
-    //cout<<"check: "<<check;
+
 
     //BLOCK
     if (isBlock)
     {
 
         position = text.find(")", position) + 1;
-        //   cout<<"position: " << position<< '\n';
-
         int i = position;
-        //  cout<<"position: " << i<< '\n';
         int count = 1;
         while (count != 0)
         {
             i++;
-            if (text[i] == '[') //stilll editing
+            if (text[i] == '[') 
             {
                 count++;
             }
@@ -37,7 +29,6 @@ PartToken PassageTokenizer::nextPart()
             {
                 count--;
             }
-            //    cout<< "count: "<<count<<"text: "<<text[i]<<'\n' ;
         }
         partText = text.substr(position, 1 + i - position);
         type = BLOCK;
@@ -89,9 +80,6 @@ PartToken PassageTokenizer::nextPart()
     {
 
         position = text.find("(if: ", position);
-        // cout << "character after end of if: " << text[text.find(")", position) + 1] <<text[text.find(")", position) + 2] << '\n';
-        //cout<<"position: " << text.find(")", position)+1<< '\n';
-
         partText = text.substr(position, (text.find(")", position) - position) + 1);
         type = IF;
         position = text.find(")", position);
@@ -118,8 +106,6 @@ PartToken PassageTokenizer::nextPart()
     else if (text.find("(else:)[", position) == position)
     {
         position = text.find("(else:", position);
-        //  cout << "character after end of else: " << text[text.find(")", position) + 1] << '\n';
-
         partText = text.substr(position, (text.find(")", position) - position) + 1);
         type = ELSE;
         position = text.find(")", position);
@@ -134,15 +120,12 @@ PartToken PassageTokenizer::nextPart()
 
         //block
         position = text.find(")", position) + 1;
-        //   cout<<"position: " << position<< '\n';
-
         int i = position;
-        //  cout<<"position: " << i<< '\n';
         int count = 1;
         while (count != 0)
         {
             i++;
-            if (text[i] == '[') //stilll editing
+            if (text[i] == '[') 
             {
                 count++;
             }
@@ -150,7 +133,6 @@ PartToken PassageTokenizer::nextPart()
             {
                 count--;
             }
-            //    cout<< "count: "<<count<<"text: "<<text[i]<<'\n' ;
         }
         partText = text.substr(position, 1 + i - position);
         type = BLOCK;
@@ -178,14 +160,7 @@ PartToken PassageTokenizer::nextPart()
         positione = text.find("(else:)", position);
 
         int mini;
-        /*
-        cout<<'\n'<<"linkp "<<positionl<<endl;
-        cout<<"gp "<<positiong<<endl;
-        cout<<"ip "<<positioni<<endl;
-        cout<<"eip "<<positionei<<endl;
-        cout<<"sp "<<positione<<endl;
-        cout<<"ep "<<positions<<endl;
-*/
+
 
         mini = positionl;
         if (positiong < mini && positiong != -1)
@@ -223,11 +198,10 @@ bool PassageTokenizer::hasNextPart()
 {
     if (text.length() > position)
     {
-        // cout<<"here"<<text.length();
         return true;
     }
 
-    //cout<<"here"<<text.length()<<text;
+
     return false;
 }
 
@@ -255,9 +229,3 @@ PartToken::PartToken(TYPE typ, string pText)
     type = typ;
     partText = pText;
 }
-
-/*PartToken::PartToken()
-{
-    type = TEXT;
-    partText = "";
-}*/
